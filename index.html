@@ -16,10 +16,20 @@
         }
         .container{
             height: 200px;
-            background-color: blue;
+            background-color: rgb(77, 77, 136);
             border-radius: 5px;
             box-shadow: 1px 10px 25px rgb(56, 20, 20);
             padding: 50px;
+        }
+        h1 {
+            font-family: cursive;
+            color: aqua;
+        }
+        #inputText{
+            width: 200px;
+            padding: 5px;
+            border: 2px solid white;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -28,6 +38,7 @@
         <h1> To do list</h1>
         <input type="text" id="inputText" placeholder="write text here">
         <button id="btn">Add task</button>
+        <ul id="TaskList"></ul>
     </div>
     <script>
         // function addTask() {
