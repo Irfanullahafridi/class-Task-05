@@ -55,15 +55,31 @@
 <body>
     <div class="container">
         <h1> To do list</h1>
-        <input type="text" id="inputText" placeholder="write text here">
-        <button id="btn">Add task</button>
+        <input type="text" id="inputText" placeholder="write new task here">
+        <button onclick="addTask()">Add task</button>
         <ul id="TaskList"></ul>
     </div>
     <script>
-        // function addTask() {
-        //     var inputText = document.getElementById("inputText");
-        //     var outPutText = document.getElementById("outPutText");
-        // }
+        function addTask() {
+             var inputText = document.getElementById("inputText");
+             var outPutText = document.getElementById("outPutText");
+
+             var li = document.createElement("li")
+             li.textContent = inputText.value;
+
+             var removeButton = document.createElement("Button")
+             removeButton.textContent = 'Remove';
+             removeButton.className = 'removeBtn';
+             removeButton.onclick = function () {
+                taskList.removeChild(li);
+             };
+
+             li.appendChild(removeButton);
+
+             taskList.appendChild(li);
+
+             inputText.value = '';
+         }
     </script>
 </body>
 </html>
