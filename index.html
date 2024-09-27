@@ -44,39 +44,48 @@
             /* justify-content: center;
             align-items: center; */
             margin-left: 90px;
-            margin-top: 20px;
+            margin-top: 10px;
         }
         button:hover{
             background-color: black;
             color: white;
         }
-        ul {
+         ul {
             list-style-type: none;
             padding: 0px;
-            max-height: 200px;
+            max-height: 70px;
             overflow-y: auto;
-            margin-bottom: 10px;
-        }
-        li {
-            background-color: black;
-            border: 1px solid red;
-            border-radius: 5px;
             margin-bottom: 5px;
+        } 
+        li {
+            background-color: rgb(245, 241, 241);
+            border: 1px solid rgb(0, 255, 76);
+            border-radius: 5px;
+            margin-bottom: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         li:hover {
-            background-color: crimson;
+            background-color: black;
+            color: white;
         }
         .completed {
             text-decoration: line-through;
             color: lawngreen;
         }
-        .removeButton{
+        .removeBtn{
             background-color: crimson;
             border: none;
-            padding: 5px 10px;
+            padding: 5px;
+            color: white;
+            border-radius: 5px;
+            font-size: medium;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .removeBtn:hover{
+            background-color: rgb(24, 9, 230);
             color: white;
         }
     </style>
@@ -86,7 +95,7 @@
         <h1> To do list</h1>
         <input type="text" id="inputText" placeholder="write new task here">
         <button onclick="addTask()">Add task</button>
-        <ul id="TaskList"></ul>
+        <ul id="taskList"></ul>
     </div>
     <script>
         function addTask() {
